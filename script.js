@@ -15,28 +15,28 @@ var finalScore = document.querySelector("#finalScore");
 var questions = [
   {
     question: "How many header tags are there?",
-    choices: ["4", "5", "6", "7"],
-    answer: "6",
+    choices: [" 4 ", " 5 ", " 6 ", " 7 "],
+    answer: " 6 ",
   },
   {
     question: "What does CSS stand for?",
     choices: [
       "corresponding style sheets",
       "cascading style sheets",
-      "computer secret secive",
+      "computer secret service",
       "coding style sheets",
     ],
     answer: "cascading style sheets",
   },
   {
     question: "what are arrays enclosed in?",
-    choices: ["()", "{}", "<>", "[]"],
-    answer: "<>",
+    choices: [" () ", " {} ", " <> ", " [] "],
+    answer: " <> ",
   },
   {
     question: "in CSS, how do you block out code",
-    choices: ["//", "/**/", "--", "!!"],
-    answer: "/**/",
+    choices: [" // ", " /**/ ", " -- ", " !! "],
+    answer: " /**/ ",
   },
 ];
 
