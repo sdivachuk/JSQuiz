@@ -19,3 +19,11 @@ button {
   color: white;
   border-radius: 8px;
 }
+ul {
+  list-style-type: none;
+  font-size: x-large;
+}
+#userName {
+height: 40px;
+font-size: x-large;
+}

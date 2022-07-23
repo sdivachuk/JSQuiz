@@ -11,6 +11,7 @@ var timerDisplay = document.querySelector("#timer");
 var time = 60;
 var timeState ;
 var finalScore = document.querySelector("#finalScore");
+var submitBtn = document.querySelector("#submitBtn");
 
 var questions = [
   {
@@ -113,8 +114,26 @@ function validate() {
 }
 
 function saveScore() {
+    var userName = document.querySelector("#userName").value;
+    var scoreArr = JSON.parse(localStorage.getItem("userScore")) || [];
+    var newScore = {score: time, name: userName};
 
+    scoreArr.push(newScore);
+    localStorage.setItem("userScore", JSON.stringify(scoreArr));
+    displayScore();
 }
+
+function displayScore() {
+    var highScoresDiv = document.querySelector("#highScores");
+    highScoresDiv.innerHTML = "";
+    var scoreArr = JSON.parse(localStorage.getItem("userScore")) || [];
+    scoreArr.forEach(function(score){
+        var scoreItem = document.createElement("li");
+        scoreItem.textContent = score.name + ": " + score.score;
+        highScoresDiv.appendChild(scoreItem);
+    })
+}
+submitBtn.onclick = saveScore;
 
 quizTitle.addEventListener("click", function () {
   state = "end";
